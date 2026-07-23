@@ -122,10 +122,6 @@ This requires IPT-compatible firmware support.
 
 Includes ESP32/Ignitron wiring references, firmware notes, and pin guidance.
 
-## Standalone Spark Preset Preview
-
-The hardware preset preview experiment was moved out of IPT 2.0 into a separate local prototype.
-That keeps IPT 2.0 focused and stable for release.
 
 ## Building A Release
 
