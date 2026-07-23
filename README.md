@@ -1,4 +1,5 @@
 # Ignitron Preset Tools 2.0
+<img width="1024" height="1024" alt="IPT" src="https://github.com/mpkottawa/ignitron-preset-tools/blob/main/Ignitron%20preset%20tools%20logo.png" />
 
 Ignitron Preset Tools 2.0 is a Windows desktop app for building Ignitron preset banks, flashing firmware, uploading the data filesystem, remotely changing presets on a connected Spark amp rig, backing up pedal presets, and capturing presets sent from the Spark app.
 
