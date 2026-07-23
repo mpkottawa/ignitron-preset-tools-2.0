@@ -45,7 +45,7 @@ py -3 -m pip install -r requirements.txt
 
 ## First-Time Firmware Setup
 
-1. Open Ignitron Preset Tools v2.0.exe. If windows pops up a warning:  Windows protected your PC.  click more info, and run anyways.(it will only ask on first run)
+1. Open Ignitron Preset Tools v2.0.exe. If windows pops up a warning:  Windows protected your PC, click "more info", and run anyways.(it will only ask on first run)
 2. On the Dashboard, select your Ignitron PlatformIO firmware folder.
 3. If IPT says the firmware support is missing, click the link to open **Firmware > IPT 2.0 Setup**.
 4. Click **Install IPT 2.0 support**.
