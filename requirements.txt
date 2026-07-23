@@ -1,0 +1,6 @@
+pyserial>=3.5
+reportlab>=4.0
+Pillow>=10.0
+requests>=2.31
+numpy>=2.0
+pyinstaller>=6.0

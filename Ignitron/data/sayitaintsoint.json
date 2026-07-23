@@ -1,0 +1,85 @@
+{
+    "PresetNumber": 127,
+    "UUID": "3429a372-da0d-4011-bf15-ddcfdb7b14f4",
+    "Name": "say it aint so int",
+    "Version": "0.7",
+    "Description": "",
+    "Icon": "icon.png",
+    "BPM": 120,
+    "Pedals": [
+        {
+            "Name": "bias.noisegate",
+            "IsOn": true,
+            "Parameters": [
+                0.2712,
+                0.3703,
+                1
+            ]
+        },
+        {
+            "Name": "BBEOpticalComp",
+            "IsOn": true,
+            "Parameters": [
+                1,
+                1,
+                0
+            ]
+        },
+        {
+            "Name": "GuitarMuff",
+            "IsOn": false,
+            "Parameters": [
+                1,
+                1,
+                1
+            ]
+        },
+        {
+            "Name": "Invader",
+            "IsOn": false,
+            "Parameters": [
+                1,
+                0.7768,
+                0.7416,
+                1,
+                0.6073
+            ]
+        },
+        {
+            "Name": "ChorusAnalog",
+            "IsOn": false,
+            "Parameters": [
+                0.1206,
+                1,
+                0.1858,
+                0.4853
+            ]
+        },
+        {
+            "Name": "DelayMono",
+            "IsOn": false,
+            "Parameters": [
+                0.271,
+                0.1906,
+                0.356,
+                0.5559,
+                0
+            ]
+        },
+        {
+            "Name": "bias.reverb",
+            "IsOn": true,
+            "Parameters": [
+                0.1757,
+                0.6804,
+                0.7618,
+                0.1776,
+                0.3025,
+                0.4089,
+                0.3,
+                1
+            ]
+        }
+    ],
+    "Checksum": "CA"
+}

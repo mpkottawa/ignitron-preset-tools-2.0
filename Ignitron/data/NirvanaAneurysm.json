@@ -1,0 +1,80 @@
+{
+    "PresetNumber": 127,
+    "UUID": "43b6636a-9e71-4a45-8b8c-e631c0da79b2",
+    "Name": "Nirvana Aneurysm",
+    "Version": "0.7",
+    "Description": "",
+    "Icon": "icon.png",
+    "BPM": 120,
+    "Pedals": [
+        {
+            "Name": "bias.noisegate",
+            "IsOn": true,
+            "Parameters": [
+                0.8702,
+                0
+            ]
+        },
+        {
+            "Name": "Compressor",
+            "IsOn": true,
+            "Parameters": [
+                0.435,
+                0.6476
+            ]
+        },
+        {
+            "Name": "Booster",
+            "IsOn": false,
+            "Parameters": [
+                0.767
+            ]
+        },
+        {
+            "Name": "EVH",
+            "IsOn": true,
+            "Parameters": [
+                1,
+                0.8875,
+                0.0047,
+                0.3612,
+                1
+            ]
+        },
+        {
+            "Name": "ChorusAnalog",
+            "IsOn": true,
+            "Parameters": [
+                0.5388,
+                0.3814,
+                0.353,
+                0.6546
+            ]
+        },
+        {
+            "Name": "DelayRe201",
+            "IsOn": true,
+            "Parameters": [
+                0.1484,
+                0.2077,
+                0.7588,
+                0.2799,
+                1
+            ]
+        },
+        {
+            "Name": "bias.reverb",
+            "IsOn": true,
+            "Parameters": [
+                0.2857,
+                0.4084,
+                0.2895,
+                0.3883,
+                0.5821,
+                0.65,
+                0.2
+            ]
+        }
+    ],
+    "Checksum": "CA"
+}

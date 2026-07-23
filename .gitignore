@@ -1,0 +1,47 @@
+# Python / local runtime
+__pycache__/
+*.py[cod]
+*.pyo
+*.log
+
+# Build and packaged release output
+/build/
+/dist/
+/release/
+/tmp/
+
+# Local editor / OS noise
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# App-generated backups, captures, and scratch output
+/backups/
+/captures/
+/output/
+/preview_cache/
+
+# Bundled firmware generated/runtime output
+/Ignitron/.pio/
+/Ignitron/backups/
+/Ignitron/captures/
+/Ignitron/doxygen/
+/Ignitron/doxygen/**
+/Ignitron/documentation/html/
+/Ignitron/documentation/html/**
+/Ignitron/documentation/latex/
+/Ignitron/documentation/latex/**
+/Ignitron/logs/
+/Ignitron/output/
+/Ignitron/preview_cache/
+/Ignitron/tmp/
+/Ignitron/tools/*.exe
+/Ignitron/tools/**/*.exe
+/Ignitron/**/*.bak
+/Ignitron/**/*.log
+
+# Generated preset/runtime caches
+/data/settings.json
+/Ignitron/data/_ipt_backups/
+*.bak

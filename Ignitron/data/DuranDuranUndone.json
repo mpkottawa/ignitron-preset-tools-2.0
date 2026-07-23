@@ -1,0 +1,79 @@
+{
+    "PresetNumber": 127,
+    "UUID": "37ff03af-5440-495b-b04c-86eca82712cb",
+    "Name": "Duran Duran Undone",
+    "Version": "0.7",
+    "Description": "Clean British AC 30 tone with slight chorus and delay",
+    "Icon": "icon.png",
+    "BPM": 120,
+    "Pedals": [
+        {
+            "Name": "bias.noisegate",
+            "IsOn": true,
+            "Parameters": [
+                1,
+                1
+            ]
+        },
+        {
+            "Name": "LA2AComp",
+            "IsOn": true,
+            "Parameters": [
+                0,
+                0.7126,
+                0.7248
+            ]
+        },
+        {
+            "Name": "Booster",
+            "IsOn": false,
+            "Parameters": [
+                0.6799
+            ]
+        },
+        {
+            "Name": "Twin",
+            "IsOn": true,
+            "Parameters": [
+                0.7465,
+                1,
+                1,
+                0.4742,
+                0.7026
+            ]
+        },
+        {
+            "Name": "Phaser",
+            "IsOn": true,
+            "Parameters": [
+                0.6927,
+                1
+            ]
+        },
+        {
+            "Name": "DelayRe201",
+            "IsOn": true,
+            "Parameters": [
+                0.2417,
+                0.2083,
+                0.6,
+                0.5563,
+                1
+            ]
+        },
+        {
+            "Name": "bias.reverb",
+            "IsOn": true,
+            "Parameters": [
+                0.8286,
+                0.7607,
+                0.2895,
+                0.7336,
+                0.5821,
+                0.65,
+                0.2
+            ]
+        }
+    ],
+    "Checksum": "CA"
+}

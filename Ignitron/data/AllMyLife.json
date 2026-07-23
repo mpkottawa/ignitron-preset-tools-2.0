@@ -1,0 +1,88 @@
+{
+    "PresetNumber": 127,
+    "UUID": "4d1f9729-ce3d-43da-9f4d-75a79c7a79bd",
+    "Name": "All My Life",
+    "Version": "0.7",
+    "Description": "",
+    "Icon": "icon.png",
+    "BPM": 120,
+    "Pedals": [
+        {
+            "Name": "bias.noisegate",
+            "IsOn": true,
+            "Parameters": [
+                0.2733,
+                0,
+                1
+            ]
+        },
+        {
+            "Name": "Compressor",
+            "IsOn": true,
+            "Parameters": [
+                0.5841,
+                0.3572
+            ]
+        },
+        {
+            "Name": "DistortionTS9",
+            "IsOn": true,
+            "Parameters": [
+                0.0552,
+                0.3047,
+                0.5093,
+                0
+            ]
+        },
+        {
+            "Name": "Rectifier",
+            "IsOn": true,
+            "Parameters": [
+                0.7975,
+                0.4546,
+                0.6158,
+                0.6059,
+                1
+            ]
+        },
+        {
+            "Name": "GuitarEQ6",
+            "IsOn": true,
+            "Parameters": [
+                0.5,
+                0.5157,
+                0.5282,
+                0.5784,
+                0.6066,
+                0.5,
+                0.5
+            ]
+        },
+        {
+            "Name": "DelayMono",
+            "IsOn": false,
+            "Parameters": [
+                0.3711,
+                0.283,
+                0.4356,
+                0.6,
+                0
+            ]
+        },
+        {
+            "Name": "bias.reverb",
+            "IsOn": false,
+            "Parameters": [
+                0.2804,
+                0.2393,
+                0.5,
+                0.4964,
+                0,
+                0.6394,
+                0.7,
+                1
+            ]
+        }
+    ],
+    "Checksum": "CA"
+}

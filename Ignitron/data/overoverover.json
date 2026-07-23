@@ -1,0 +1,82 @@
+{
+    "PresetNumber": 127,
+    "UUID": "62a02b58-e6b6-4d34-b19d-629542282300",
+    "Name": "Jack White Over and Over and Over",
+    "Version": "0.7",
+    "Description": "Mid heavy fuzz tone",
+    "Icon": "icon.png",
+    "BPM": 120,
+    "Pedals": [
+        {
+            "Name": "bias.noisegate",
+            "IsOn": true,
+            "Parameters": [
+                0.4763,
+                0.6542
+            ]
+        },
+        {
+            "Name": "LA2AComp",
+            "IsOn": true,
+            "Parameters": [
+                0,
+                1,
+                0.7248
+            ]
+        },
+        {
+            "Name": "GuitarMuff",
+            "IsOn": true,
+            "Parameters": [
+                1,
+                1,
+                1
+            ]
+        },
+        {
+            "Name": "FatAcousticV2",
+            "IsOn": true,
+            "Parameters": [
+                0.8217,
+                1,
+                0.8153,
+                0.7077,
+                1
+            ]
+        },
+        {
+            "Name": "Flanger",
+            "IsOn": true,
+            "Parameters": [
+                0,
+                0.3125,
+                0.3354
+            ]
+        },
+        {
+            "Name": "DelayMono",
+            "IsOn": false,
+            "Parameters": [
+                0.3818,
+                0.3983,
+                0.7363,
+                0.6,
+                1
+            ]
+        },
+        {
+            "Name": "bias.reverb",
+            "IsOn": true,
+            "Parameters": [
+                0.3357,
+                0.6438,
+                0.5208,
+                0.2813,
+                0.4695,
+                0.4555,
+                0.6
+            ]
+        }
+    ],
+    "Checksum": "CA"
+}

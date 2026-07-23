@@ -1,0 +1,79 @@
+{
+    "PresetNumber": 127,
+    "UUID": "060a3951-e555-4e5e-85fe-2f20604eb018",
+    "Name": "Born on the Bayou",
+    "Version": "0.7",
+    "Description": "Description for Blues Preset 1",
+    "Icon": "icon.png",
+    "BPM": 120,
+    "Pedals": [
+        {
+            "Name": "bias.noisegate",
+            "IsOn": false,
+            "Parameters": [
+                0.283,
+                0.3042
+            ]
+        },
+        {
+            "Name": "Compressor",
+            "IsOn": true,
+            "Parameters": [
+                0.3255,
+                0.7891
+            ]
+        },
+        {
+            "Name": "Booster",
+            "IsOn": true,
+            "Parameters": [
+                0.7649
+            ]
+        },
+        {
+            "Name": "Twin",
+            "IsOn": true,
+            "Parameters": [
+                0.6134,
+                0.3717,
+                0.4532,
+                0.6767,
+                0.8058
+            ]
+        },
+        {
+            "Name": "UniVibe",
+            "IsOn": true,
+            "Parameters": [
+                0.5,
+                1,
+                0.7
+            ]
+        },
+        {
+            "Name": "DelayEchoFilt",
+            "IsOn": false,
+            "Parameters": [
+                0.5339,
+                0.2756,
+                0.4554,
+                0.4577,
+                1
+            ]
+        },
+        {
+            "Name": "bias.reverb",
+            "IsOn": true,
+            "Parameters": [
+                0.65,
+                0.15,
+                0.5,
+                0.6214,
+                0.3699,
+                0.35,
+                0.1
+            ]
+        }
+    ],
+    "Checksum": "CA"
+}

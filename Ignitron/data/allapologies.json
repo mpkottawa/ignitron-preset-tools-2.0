@@ -1,0 +1,83 @@
+{
+    "PresetNumber": 127,
+    "UUID": "046e0e2b-f981-479e-a5f1-3d994e89201e",
+    "Name": "all apologies ",
+    "Version": "0.7",
+    "Description": "",
+    "Icon": "icon.png",
+    "BPM": 120,
+    "Pedals": [
+        {
+            "Name": "bias.noisegate",
+            "IsOn": true,
+            "Parameters": [
+                0.044,
+                0,
+                1
+            ]
+        },
+        {
+            "Name": "LA2AComp",
+            "IsOn": false,
+            "Parameters": [
+                1,
+                0.5432,
+                0.3662
+            ]
+        },
+        {
+            "Name": "KlonCentaurSilver",
+            "IsOn": true,
+            "Parameters": [
+                1,
+                0.2877,
+                0.2283
+            ]
+        },
+        {
+            "Name": "Acoustic",
+            "IsOn": true,
+            "Parameters": [
+                0.5824,
+                0.9178,
+                0.8911,
+                0.8342,
+                1
+            ]
+        },
+        {
+            "Name": "Tremolo",
+            "IsOn": true,
+            "Parameters": [
+                1,
+                0.1821,
+                1
+            ]
+        },
+        {
+            "Name": "VintageDelay",
+            "IsOn": false,
+            "Parameters": [
+                0.2775,
+                0.3497,
+                0.1119,
+                0
+            ]
+        },
+        {
+            "Name": "bias.reverb",
+            "IsOn": false,
+            "Parameters": [
+                0.1765,
+                0,
+                0.4065,
+                0.0989,
+                0,
+                1,
+                0.1,
+                0
+            ]
+        }
+    ],
+    "Checksum": "CA"
+}
