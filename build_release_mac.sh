@@ -32,6 +32,26 @@ else
   echo "To add one, convert IPT.ico to IPT.icns on macOS and rerun this script."
 fi
 
+DATA_ARGS=()
+if [[ -d "$ROOT/reference" ]]; then
+  DATA_ARGS+=(--add-data "$ROOT/reference:reference")
+fi
+if [[ -d "$ROOT/data" ]]; then
+  DATA_ARGS+=(--add-data "$ROOT/data:data")
+fi
+if [[ -f "$ROOT/IPT.ico" ]]; then
+  DATA_ARGS+=(--add-data "$ROOT/IPT.ico:.")
+fi
+if [[ -f "$ROOT/preset_puller.py" ]]; then
+  DATA_ARGS+=(--add-data "$ROOT/preset_puller.py:.")
+fi
+if [[ -f "$ROOT/preset_chart.py" ]]; then
+  DATA_ARGS+=(--add-data "$ROOT/preset_chart.py:.")
+fi
+if [[ -f "$ROOT/preset_converter.py" ]]; then
+  DATA_ARGS+=(--add-data "$ROOT/preset_converter.py:.")
+fi
+
 pyinstaller \
   --noconfirm \
   --windowed \
@@ -40,12 +60,7 @@ pyinstaller \
   --workpath "$BUILD_ROOT/pyinstaller-macos" \
   --specpath "$BUILD_ROOT" \
   ${ICON_ARGS[@]+"${ICON_ARGS[@]}"} \
-  --add-data "$ROOT/reference:reference" \
-  --add-data "$ROOT/data:data" \
-  --add-data "$ROOT/IPT.ico:." \
-  --add-data "$ROOT/preset_puller.py:." \
-  --add-data "$ROOT/preset_chart.py:." \
-  --add-data "$ROOT/preset_converter.py:." \
+  ${DATA_ARGS[@]+"${DATA_ARGS[@]}"} \
   "$ENTRY"
 
 cp "$ROOT/README.md" "$DIST_APP/Contents/Resources/README.md"
