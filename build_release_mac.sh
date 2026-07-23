@@ -7,9 +7,10 @@ ENTRY="$ROOT/ignitron_preset_tools_v2.0.py"
 BUILD_ROOT="$ROOT/build"
 DIST_ROOT="$ROOT/release"
 DIST_APP="$DIST_ROOT/$APP_NAME.app"
+DIST_PACKAGE="$DIST_ROOT/$APP_NAME macOS"
 ZIP_PATH="$DIST_ROOT/$APP_NAME-macOS.zip"
 FIRMWARE_SOURCE="$ROOT/Ignitron"
-FIRMWARE_RELEASE="$DIST_APP/Contents/Resources/ignitron firmware"
+FIRMWARE_RELEASE="$DIST_PACKAGE/ignitron firmware"
 
 if [[ "$(uname -s)" != "Darwin" ]]; then
   echo "This script must be run on macOS to build a real .app bundle."
@@ -49,6 +50,11 @@ pyinstaller \
 
 cp "$ROOT/README.md" "$DIST_APP/Contents/Resources/README.md"
 cp "$ROOT/RELEASE_NOTES.md" "$DIST_APP/Contents/Resources/RELEASE_NOTES.md"
+rm -rf "$DIST_PACKAGE"
+mkdir -p "$DIST_PACKAGE"
+cp -R "$DIST_APP" "$DIST_PACKAGE/"
+cp "$ROOT/README.md" "$DIST_PACKAGE/README.md"
+cp "$ROOT/RELEASE_NOTES.md" "$DIST_PACKAGE/RELEASE_NOTES.md"
 if [[ -d "$FIRMWARE_SOURCE" ]]; then
   rm -rf "$FIRMWARE_RELEASE"
   cp -R "$FIRMWARE_SOURCE" "$FIRMWARE_RELEASE"
@@ -63,8 +69,9 @@ if [[ -d "$FIRMWARE_SOURCE" ]]; then
 fi
 
 rm -f "$ZIP_PATH"
-ditto -c -k --sequesterRsrc --keepParent "$DIST_APP" "$ZIP_PATH"
+ditto -c -k --sequesterRsrc --keepParent "$DIST_PACKAGE" "$ZIP_PATH"
 
 echo "Built $APP_NAME for macOS"
 echo "App: $DIST_APP"
+echo "Package: $DIST_PACKAGE"
 echo "Zip: $ZIP_PATH"

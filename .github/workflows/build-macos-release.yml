@@ -1,0 +1,45 @@
+name: Build macOS Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      release_tag:
+        description: GitHub release tag to attach the macOS ZIP to
+        required: true
+        default: v2.0.0
+
+permissions:
+  contents: write
+
+jobs:
+  build-macos:
+    name: Build macOS app
+    runs-on: macos-latest
+
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Build macOS package
+        run: |
+          chmod +x ./build_release_mac.sh
+          ./build_release_mac.sh
+
+      - name: Upload workflow artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Ignitron-Preset-Tools-v2.0-macOS
+          path: release/Ignitron Preset Tools v2.0-macOS.zip
+          if-no-files-found: error
+
+      - name: Attach ZIP to GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ inputs.release_tag }}
+        run: |
+          gh release upload "$RELEASE_TAG" "release/Ignitron Preset Tools v2.0-macOS.zip" --clobber

@@ -147,7 +147,9 @@ The EXE uses `IPT.ico` as its Windows icon/badge.
 
 ### Building A Mac Release
 
-macOS apps must be built on macOS. From a Mac terminal in this project folder:
+macOS apps must be built on macOS. The GitHub release can build it automatically from the **Build macOS Release** workflow, which attaches the macOS ZIP to the selected release tag.
+
+From a Mac terminal in this project folder:
 
 ```bash
 python3 -m pip install -r requirements.txt
@@ -159,8 +161,11 @@ The Mac build script creates:
 
 ```text
 release/Ignitron Preset Tools v2.0.app
+release/Ignitron Preset Tools v2.0 macOS
 release/Ignitron Preset Tools v2.0-macOS.zip
 ```
+
+The macOS ZIP contains the `.app`, README files, and a visible `ignitron firmware` folder at the top level.
 
 If you want a custom macOS dock icon, convert `IPT.ico` to `IPT.icns` on the Mac and place `IPT.icns` beside the script before running it. The Windows EXE always uses `IPT.ico`.
 

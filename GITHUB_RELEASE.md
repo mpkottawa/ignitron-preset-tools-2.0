@@ -1,6 +1,6 @@
 # Ignitron Preset Tools 2.0
 
-IPT 2.0 is the streamlined Windows desktop release for building Ignitron preset banks, installing the IPT 2.0 firmware support, flashing firmware/filesystem data, controlling presets live from the PC, backing up pedal presets, and capturing presets from the Spark app.
+IPT 2.0 is the streamlined desktop release for building Ignitron preset banks, installing the IPT 2.0 firmware support, flashing firmware/filesystem data, controlling presets live from the PC, backing up pedal presets, and capturing presets from the Spark app.
 
 ## Downloads
 
@@ -22,7 +22,7 @@ The Windows EXE is badged with `IPT.ico`.
 
 ### macOS
 
-A macOS app must be built on macOS. The release source includes:
+A macOS app must be built on macOS. The GitHub release includes a macOS ZIP built by the **Build macOS Release** workflow. The release source also includes:
 
 ```text
 build_release_mac.sh
@@ -40,8 +40,11 @@ That creates:
 
 ```text
 release/Ignitron Preset Tools v2.0.app
+release/Ignitron Preset Tools v2.0 macOS
 release/Ignitron Preset Tools v2.0-macOS.zip
 ```
+
+The macOS ZIP contains the `.app`, README files, and a visible `ignitron firmware` folder at the top level.
 
 Optional: convert `IPT.ico` to `IPT.icns` on macOS before running the script to give the `.app` a custom dock icon.
 

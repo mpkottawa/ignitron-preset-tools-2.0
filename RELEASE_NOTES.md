@@ -47,6 +47,7 @@ Release date: 2026-07-06
 - Added app discovery for an `Ignitron` firmware folder beside the v2.0 tools.
 - Added a launcher, README, requirements file, and a release build script.
 - Windows release downloads now expose the bundled firmware as a root-level `ignitron firmware` folder beside the EXE instead of burying it in `_internal`.
+- Added a GitHub Actions macOS release workflow that builds the `.app` on a macOS runner and attaches `Ignitron Preset Tools v2.0-macOS.zip` to the release page.
 
 ## Upgrade Notes
 

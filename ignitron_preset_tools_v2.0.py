@@ -77,6 +77,7 @@ def resource_path(name):
         app_dir().parent,
         app_dir().parent / "Resources",
         app_dir().parent.parent,
+        app_dir().parent.parent.parent,
         Path(getattr(sys, "_MEIPASS", app_dir())),
     ]
     for root in roots:
@@ -319,7 +320,7 @@ def run_hidden_subprocess(cmd, cwd):
 
 def default_project_dir():
     candidates = []
-    for root in (app_dir(), app_dir().parent, app_dir().parent.parent):
+    for root in (app_dir(), app_dir().parent, app_dir().parent.parent, app_dir().parent.parent.parent):
         candidates.extend(root / name for name in FIRMWARE_FOLDER_NAMES)
     candidates.extend([app_dir().parent, app_dir()])
     for candidate in candidates:
