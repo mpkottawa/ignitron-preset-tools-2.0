@@ -39,7 +39,7 @@ pyinstaller \
   --distpath "$DIST_ROOT" \
   --workpath "$BUILD_ROOT/pyinstaller-macos" \
   --specpath "$BUILD_ROOT" \
-  "${ICON_ARGS[@]}" \
+  ${ICON_ARGS[@]+"${ICON_ARGS[@]}"} \
   --add-data "$ROOT/reference:reference" \
   --add-data "$ROOT/data:data" \
   --add-data "$ROOT/IPT.ico:." \
