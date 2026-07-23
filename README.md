@@ -10,7 +10,7 @@ The big goal for 2.0 is less fiddling: choose your firmware folder, install the 
 - An Ignitron pedal connected by USB.
 - PlatformIO installed if you want to build/flash firmware from source.
 - A Spark amp connected to Ignitron for remote preset control, capture, hardware preset control, or Spark 2 looper features.
-- The bundled `Ignitron` firmware folder, or your own Ignitron firmware folder.
+- The bundled `ignitron firmware` folder in the release download, or your own Ignitron firmware folder.
 
 ## Quick Start
 
@@ -124,13 +124,8 @@ Includes ESP32/Ignitron wiring references, firmware notes, and pin guidance.
 
 ## Standalone Spark Preset Preview
 
-The hardware preset preview experiment was moved out of IPT 2.0 and into:
-
-```text
-T:\spark preset preview
-```
-
-That prototype is separate so IPT 2.0 can stay focused and stable for release.
+The hardware preset preview experiment was moved out of IPT 2.0 into a separate local prototype.
+That keeps IPT 2.0 focused and stable for release.
 
 ## Building A Release
 
@@ -176,7 +171,8 @@ If you want a custom macOS dock icon, convert `IPT.ico` to `IPT.icns` on the Mac
 - `build_release.ps1` - PyInstaller release builder.
 - `build_release_mac.sh` - macOS PyInstaller release builder, to be run on a Mac.
 - `IPT.ico` - app icon.
-- `Ignitron\` - bundled IPT 2.0-ready firmware.
+- `ignitron firmware\` - bundled IPT 2.0-ready firmware in the release download.
+- `Ignitron\` - bundled IPT 2.0-ready firmware source folder when running from this repository.
 - `data\` - preset data folder used by the app.
 - `reference\` - reference docs/assets.
 - `preset_puller.py`, `preset_chart.py`, `preset_converter.py`, `preset_app_scraper.py` - helper tools.

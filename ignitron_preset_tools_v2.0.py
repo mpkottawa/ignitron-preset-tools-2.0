@@ -62,6 +62,7 @@ ORANGE = "#e66a1f"
 GREEN = "#37c878"
 RED = "#e35050"
 FIRMWARE_MOD_PAGES = {"firmware", "remote", "capture"}
+FIRMWARE_FOLDER_NAMES = ("ignitron firmware", "Ignitron")
 
 
 def app_dir():
@@ -71,12 +72,26 @@ def app_dir():
 
 
 def resource_path(name):
-    roots = [app_dir(), app_dir().parent, Path(getattr(sys, "_MEIPASS", app_dir()))]
+    roots = [
+        app_dir(),
+        app_dir().parent,
+        app_dir().parent / "Resources",
+        app_dir().parent.parent,
+        Path(getattr(sys, "_MEIPASS", app_dir())),
+    ]
     for root in roots:
         candidate = root / name
         if candidate.exists():
             return candidate
     return roots[0] / name
+
+
+def first_resource_path(*names):
+    for name in names:
+        candidate = resource_path(name)
+        if candidate.exists():
+            return candidate
+    return resource_path(names[0])
 
 
 def settings_file():
@@ -303,14 +318,10 @@ def run_hidden_subprocess(cmd, cwd):
 
 
 def default_project_dir():
-    candidates = [
-        app_dir() / "Ignitron",
-        app_dir().parent / "Ignitron",
-        app_dir().parent.parent / "Ignitron",
-        Path(r"T:\ignitron"),
-        app_dir().parent,
-        app_dir(),
-    ]
+    candidates = []
+    for root in (app_dir(), app_dir().parent, app_dir().parent.parent):
+        candidates.extend(root / name for name in FIRMWARE_FOLDER_NAMES)
+    candidates.extend([app_dir().parent, app_dir()])
     for candidate in candidates:
         if (candidate / "platformio.ini").exists() and (candidate / "data").exists():
             return candidate
@@ -2998,7 +3009,7 @@ class FirmwareUploadPage(Page):
         self.load_project_defaults()
 
     def bundled_firmware_dir(self):
-        return resource_path("Ignitron")
+        return first_resource_path(*FIRMWARE_FOLDER_NAMES)
 
     def _write_ipt_setup_log(self, text):
         log = getattr(self, "ipt_setup_log", None)

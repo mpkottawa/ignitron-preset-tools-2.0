@@ -93,4 +93,4 @@ The main flash button writes settings to `platformio.ini`, builds firmware, uplo
 - Default upload speed is `460800` for reliability.
 - App serial tools communicate at `115200`.
 - Pedal Remote and Spark Capture (including pedal backup) require IPT-compatible firmware.
-- The hardware preset preview experiment was moved out to `T:\spark preset preview` as a separate prototype.
+- The hardware preset preview experiment was moved out as a separate local prototype.

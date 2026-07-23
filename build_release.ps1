@@ -8,6 +8,8 @@ $BuildRoot = Join-Path $Root "build"
 $DistRoot = Join-Path $Root "release"
 $DistApp = Join-Path $DistRoot $AppName
 $ZipPath = Join-Path $DistRoot "$AppName.zip"
+$FirmwareSource = Join-Path $Root "Ignitron"
+$FirmwareRelease = Join-Path $DistApp "ignitron firmware"
 
 if (-not (Test-Path -LiteralPath $Entry)) {
   throw "Missing entry point: $Entry"
@@ -28,10 +30,6 @@ if (Test-Path -LiteralPath (Join-Path $Root "reference")) {
 if (Test-Path -LiteralPath (Join-Path $Root "data")) {
   $addData += "--add-data"
   $addData += "$(Join-Path $Root 'data');data"
-}
-if (Test-Path -LiteralPath (Join-Path $Root "Ignitron")) {
-  $addData += "--add-data"
-  $addData += "$(Join-Path $Root 'Ignitron');Ignitron"
 }
 if (Test-Path -LiteralPath $Icon) {
   $addData += "--add-data"
@@ -62,6 +60,18 @@ Copy-Item -LiteralPath (Join-Path $Root "README.md") -Destination (Join-Path $Di
 Copy-Item -LiteralPath (Join-Path $Root "README.md") -Destination (Join-Path $DistApp "README.md") -Force
 Copy-Item -LiteralPath (Join-Path $Root "RELEASE_NOTES.md") -Destination (Join-Path $DistApp "RELEASE_NOTES.txt") -Force
 Copy-Item -LiteralPath (Join-Path $Root "RELEASE_NOTES.md") -Destination (Join-Path $DistApp "RELEASE_NOTES.md") -Force
+if (Test-Path -LiteralPath $FirmwareSource) {
+  if (Test-Path -LiteralPath $FirmwareRelease) {
+    Remove-Item -LiteralPath $FirmwareRelease -Recurse -Force
+  }
+  Copy-Item -LiteralPath $FirmwareSource -Destination $FirmwareRelease -Recurse -Force
+  @(".pio", "backups", "captures", "logs", "output", "tmp", "preview_cache") | ForEach-Object {
+    $generatedPath = Join-Path $FirmwareRelease $_
+    if (Test-Path -LiteralPath $generatedPath) {
+      Remove-Item -LiteralPath $generatedPath -Recurse -Force
+    }
+  }
+}
 
 if (Test-Path -LiteralPath $ZipPath) {
   Remove-Item -LiteralPath $ZipPath -Force

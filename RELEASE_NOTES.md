@@ -3,7 +3,7 @@
 ## Preview Split-Out
 
 - Removed the Hardware Preset Preview page from IPT 2.0.
-- Moved the hardware rendering experiment to `T:\spark preset preview` as a standalone prototype for loading a base/dry WAV, selecting bank presets through Ignitron, and caching Spark return audio.
+- Moved the hardware rendering experiment out as a standalone local prototype for loading a base/dry WAV, selecting bank presets through Ignitron, and caching Spark return audio.
 
 ## Firmware + Filesystem
 
@@ -46,10 +46,11 @@ Release date: 2026-07-06
 - Added firmware-side `SELECTPRESET bank preset`, `SELECTHW hardware-bank preset`, `STOREHW hardware-bank preset`, `LOOPER ...`, `MIRROR ON/OFF`, and `TUNERSTREAM ON/OFF` serial commands in the bundled working firmware folder.
 - Added app discovery for an `Ignitron` firmware folder beside the v2.0 tools.
 - Added a launcher, README, requirements file, and a release build script.
+- Windows release downloads now expose the bundled firmware as a root-level `ignitron firmware` folder beside the EXE instead of burying it in `_internal`.
 
 ## Upgrade Notes
 
 - Existing v1.1.1 generated build/release artifacts were not copied into the v2.0 workspace.
-- The app still defaults to `T:\ignitron` when it looks like the active Ignitron PlatformIO project.
+- The app prefers an `Ignitron` firmware folder beside the IPT 2.0 app/source folder when it looks like a PlatformIO project.
 - Duplicate cleanup backup folders are created inside the selected preset library as `_ipt_duplicate_backups`.
 - Preset Builder export backups are created inside the selected data/output folder as `_ipt_backups`.
