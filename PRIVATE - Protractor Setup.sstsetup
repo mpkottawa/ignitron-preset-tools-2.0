@@ -1,9 +1,0 @@
-{
-  "format": "silverstar-protractor-setup",
-  "version": 2,
-  "api_profile": "external_v1",
-  "base_url": "https://integration.protractor.com/IntegrationServices/2.0",
-  "connection_id": "948cc8bf265442109a0e0fac5e6ace44",
-  "api_key": "f60a5aadc2304675bbe4d1b2032faa2e",
-  "authentication": "5my7H/KuHcLyBH2B9Wko9tCbOCE="
-}
